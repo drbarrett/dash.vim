@@ -119,7 +119,14 @@ function! s:search(term, keywords) "{{{
     let activation = ''
   endif
   let url = 'dash-plugin://' . shellescape(keys . query . activation)
-  silent execute '!open -g ' . url
+  if has('ivim')
+    " strip single quotes, as iopenurl doesn't strip the ' chars
+	" that shellescape added
+    let url = substitute(url, "'", '', 'g')
+    silent execute 'iopenurl ' . url
+  else
+    silent execute '!open -g ' . url
+  endif
   redraw!
 endfunction
 "}}}
