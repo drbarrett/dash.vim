@@ -9,6 +9,8 @@ WARNING: [Dash.app][Dash] is a Mac only application, so you will not benefit
 from using dash.vim on Linux nor Windows. It can be installed on those systems
 however, but it will not load.
 
+NOTE:This fork has been modified to work with the [iVim][iVim] IOS port of Vim.
+
 ## Commands, Mappings and Configuration
 
 Read the [help][txt-doc] to know more.
@@ -57,6 +59,7 @@ And run `:PlugInstall` inside Vim or `vim +PlugInstall +qa` from shell.
 MIT
 
 [Dash]: http://kapeli.com/
+[iVim]: https://github.com/terrychou/iVim
 [pathogen]: https://github.com/tpope/vim-pathogen
 [txt-doc]: https://raw.githubusercontent.com/rizzatti/dash.vim/master/doc/dash.txt
 [vpm]: https://github.com/KevinSjoberg/vpm
